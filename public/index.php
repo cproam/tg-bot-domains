@@ -1,11 +1,11 @@
 <?php
 
-require_once 'vendor/autoload.php';
+require_once dirname(__DIR__) . '/vendor/autoload.php';
 
 use GuzzleHttp\Client;
 use TelegramBot\Bot;
 
-$config = parse_ini_file('.env');
+$config = parse_ini_file(dirname(__DIR__) . '/.env');
 
 $botToken = $config['TELEGRAM_BOT_TOKEN'] ?? null;
 $timewebLogin = $config['TIMEWEB_LOGIN'] ?? null;
